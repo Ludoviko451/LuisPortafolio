@@ -6,8 +6,8 @@ export const personalInfo = {
   roleAlt: 'Software Developer',
   location: 'Cúcuta, Colombia',
   github: 'https://github.com/Ludoviko451',
-  linkedin: 'https://linkedin.com/in/luis-angel-quiros',
-  email: '',
+  linkedin: 'https://www.linkedin.com/in/luisquirosflorez/',
+  email: 'luisangelquirosflorez@gmail.com',
   bio: 'Desarrollador de software apasionado por construir soluciones backend, aplicaciones web y servicios en la nube, con experiencia en microservicios, AWS y desarrollo de software.',
   about: [
     'Soy desarrollador de software con experiencia profesional en desarrollo backend, microservicios, bases de datos y servicios en la nube.',

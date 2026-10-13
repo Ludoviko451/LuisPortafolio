@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FolderGit2, Github, ExternalLink, Star } from 'lucide-react';
+import { FolderGit2, GitBranch, ExternalLink, Star } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 
 const techColors: Record<string, string> = {
@@ -92,7 +92,7 @@ export default function Projects() {
             className="btn-secondary inline-flex"
             id="projects-github-cta"
           >
-            <Github size={16} />
+            <GitBranch size={16} />
             Ver todos los repositorios
           </a>
         </motion.div>
@@ -175,7 +175,7 @@ function ProjectCard({
           className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors"
           id={`project-github-${project.id}`}
         >
-          <Github size={14} />
+          <GitBranch size={14} />
           Repositorio
         </a>
         {project.demo && (

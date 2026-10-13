@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail, Github, Linkedin, Download, MessageSquare, MapPin } from 'lucide-react';
+import { Mail, GitBranch, Link2, Download, MessageSquare, MapPin } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 const contactLinks = [
   {
     id: 'contact-github',
-    icon: Github,
+    icon: GitBranch,
     label: 'GitHub',
     value: '@Ludoviko451',
     href: personalInfo.github,
@@ -16,7 +16,7 @@ const contactLinks = [
   },
   {
     id: 'contact-linkedin',
-    icon: Linkedin,
+    icon: Link2,
     label: 'LinkedIn',
     value: 'Agregar perfil',
     href: personalInfo.linkedin,

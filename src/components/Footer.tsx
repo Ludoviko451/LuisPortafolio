@@ -1,4 +1,4 @@
-import { Github, Linkedin, Code2, Heart } from 'lucide-react';
+import { GitBranch, Link2, Code2, Heart } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Footer() {
@@ -29,7 +29,7 @@ export default function Footer() {
               className="p-2.5 rounded-lg text-slate-500 hover:text-white hover:bg-white/5 transition-all"
               aria-label="GitHub"
             >
-              <Github size={18} />
+              <GitBranch size={18} />
             </a>
             <a
               href={personalInfo.linkedin}
@@ -39,7 +39,7 @@ export default function Footer() {
               className="p-2.5 rounded-lg text-slate-500 hover:text-blue-400 hover:bg-blue-500/10 transition-all"
               aria-label="LinkedIn"
             >
-              <Linkedin size={18} />
+              <Link2 size={18} />
             </a>
           </div>
 

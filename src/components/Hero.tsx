@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Download, Mail, ChevronDown, MapPin, Briefcase } from 'lucide-react';
+import { GitBranch, Download, Mail, ChevronDown, MapPin, Briefcase } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 const floatingVariants = {
@@ -130,7 +130,7 @@ export default function Hero() {
                 className="btn-secondary"
                 id="hero-github"
               >
-                <Github size={16} />
+                <GitBranch size={16} />
                 GitHub
               </a>
               <a

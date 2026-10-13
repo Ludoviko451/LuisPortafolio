@@ -47,13 +47,16 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-brand-blue);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-brand-cyan);
 }
@@ -272,4 +275,428 @@ body {
   background: linear-gradient(135deg, #2563eb, #06b6d4);
   border: 3px solid var(--color-bg-primary);
   box-shadow: 0 0 12px rgba(37, 99, 235, 0.5);
+}
+
+/* ========================================
+   MEJORAS GENERALES DE ESPACIADO
+======================================== */
+
+html {
+  scroll-padding-top: 96px;
+}
+
+body {
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding: 64px 32px;
+}
+
+.section-label {
+  margin-bottom: 16px;
+}
+
+.section-title {
+  margin-bottom: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+/* Separación entre secciones */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* ========================================
+   TARJETAS
+======================================== */
+
+.glass-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(15, 30, 56, 0.72);
+  border-color: rgba(96, 165, 250, 0.16);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.glass-card:hover {
+  background: rgba(21, 35, 66, 0.92);
+  border-color: rgba(59, 130, 246, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* Los elementos de las tarjetas no deben pegarse */
+.glass-card h3,
+.glass-card h4 {
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.glass-card p {
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+
+.glass-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.glass-card li {
+  padding-left: 2px;
+  margin-bottom: 5px;
+}
+
+/* ========================================
+   TECNOLOGÍAS Y ETIQUETAS
+======================================== */
+
+.tech-badge {
+  padding: 5px 11px;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  margin: 3px 4px 3px 0;
+}
+
+.tech-badge:hover {
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   EXPERIENCIA Y PROYECTOS
+======================================== */
+
+/* Aplicar estas clases a los contenedores
+   de tarjetas en el JSX */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.experience-card {
+  padding: 20px 22px;
+  border-radius: 14px;
+  margin-bottom: 0;
+}
+
+.experience-card+.experience-card {
+  margin-top: 0;
+}
+
+/* Evitar desbordamientos de textos y etiquetas */
+.glass-card,
+.cards-grid>*,
+.projects-grid>*,
+.experience-list>* {
+  min-width: 0;
+}
+
+.glass-card p,
+.glass-card h3,
+.glass-card h4 {
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .section-container {
+    padding: 52px 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .cards-grid {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-container {
+    padding: 40px 18px;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+    margin-bottom: 22px;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+  }
+
+  .cards-grid,
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .glass-card {
+    padding: 17px;
+    border-radius: 13px;
+  }
+
+  .experience-card {
+    padding: 17px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    white-space: normal;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   MEJORAS GENERALES DE ESPACIADO
+======================================== */
+
+html {
+  scroll-padding-top: 96px;
+}
+
+body {
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding: 64px 32px;
+}
+
+.section-label {
+  margin-bottom: 16px;
+}
+
+.section-title {
+  margin-bottom: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+/* Separación entre secciones */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* ========================================
+   TARJETAS
+======================================== */
+
+.glass-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(15, 30, 56, 0.72);
+  border-color: rgba(96, 165, 250, 0.16);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.glass-card:hover {
+  background: rgba(21, 35, 66, 0.92);
+  border-color: rgba(59, 130, 246, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* Los elementos de las tarjetas no deben pegarse */
+.glass-card h3,
+.glass-card h4 {
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.glass-card p {
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+
+.glass-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.glass-card li {
+  padding-left: 2px;
+  margin-bottom: 5px;
+}
+
+/* ========================================
+   TECNOLOGÍAS Y ETIQUETAS
+======================================== */
+
+.tech-badge {
+  padding: 5px 11px;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  margin: 3px 4px 3px 0;
+}
+
+.tech-badge:hover {
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   EXPERIENCIA Y PROYECTOS
+======================================== */
+
+/* Aplicar estas clases a los contenedores
+   de tarjetas en el JSX */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.experience-card {
+  padding: 20px 22px;
+  border-radius: 14px;
+  margin-bottom: 0;
+}
+
+.experience-card+.experience-card {
+  margin-top: 0;
+}
+
+/* Evitar desbordamientos de textos y etiquetas */
+.glass-card,
+.cards-grid>*,
+.projects-grid>*,
+.experience-list>* {
+  min-width: 0;
+}
+
+.glass-card p,
+.glass-card h3,
+.glass-card h4 {
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .section-container {
+    padding: 52px 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .cards-grid {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-container {
+    padding: 40px 18px;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+    margin-bottom: 22px;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+  }
+
+  .cards-grid,
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .glass-card {
+    padding: 17px;
+    border-radius: 13px;
+  }
+
+  .experience-card {
+    padding: 17px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    white-space: normal;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
