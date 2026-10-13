@@ -11,11 +11,10 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#080c14]">
+    <div className="min-h-screen" style={{ background: '#080c14' }}>
       <Navbar />
       <main>
         <Hero />
-        {/* Section dividers */}
         <div className="section-divider" />
         <About />
         <div className="section-divider" />
