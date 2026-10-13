@@ -26,7 +26,7 @@ export default function ScrollToTop() {
           onClick={handleClick}
           id="scroll-to-top"
           aria-label="Volver al inicio"
-          className="fixed bottom-8 right-6 z-50 w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:scale-110 transition-all"
+          className="fixed bottom-8 right-6 z-50 w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-600/25 hover:bg-blue-700 hover:scale-105 transition-all cursor-pointer"
         >
           <ArrowUp size={18} />
         </motion.button>

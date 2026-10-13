@@ -5,18 +5,18 @@ import { FolderGit2, GitBranch, ExternalLink, Star } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 
 const techColors: Record<string, string> = {
-  Java:          'bg-orange-500/10 text-orange-400 border-orange-500/20',
-  'Spring Boot': 'bg-green-500/10  text-green-400  border-green-500/20',
-  Python:        'bg-yellow-500/10 text-yellow-400 border-yellow-500/20',
-  JavaScript:    'bg-yellow-400/10 text-yellow-300 border-yellow-400/20',
-  TypeScript:    'bg-blue-400/10   text-blue-300   border-blue-400/20',
-  React:         'bg-cyan-500/10   text-cyan-400   border-cyan-500/20',
-  Kotlin:        'bg-purple-500/10 text-purple-400  border-purple-500/20',
-  Android:       'bg-green-600/10  text-green-400  border-green-600/20',
-  HTML:          'bg-orange-600/10 text-orange-300 border-orange-600/20',
-  CSS:           'bg-blue-600/10   text-blue-300   border-blue-600/20',
-  Figma:         'bg-pink-500/10   text-pink-400   border-pink-500/20',
-  default:       'bg-slate-600/15  text-slate-400  border-slate-600/20',
+  Java:          'bg-orange-50 text-orange-700 border-orange-200',
+  'Spring Boot': 'bg-emerald-50 text-emerald-700 border-emerald-200',
+  Python:        'bg-amber-50 text-amber-700 border-amber-200',
+  JavaScript:    'bg-yellow-50 text-yellow-800 border-yellow-200',
+  TypeScript:    'bg-blue-50 text-blue-700 border-blue-200',
+  React:         'bg-sky-50 text-sky-700 border-sky-200',
+  Kotlin:        'bg-purple-50 text-purple-700 border-purple-200',
+  Android:       'bg-green-50 text-green-700 border-green-200',
+  HTML:          'bg-orange-50 text-orange-700 border-orange-200',
+  CSS:           'bg-blue-50 text-blue-700 border-blue-200',
+  Figma:         'bg-pink-50 text-pink-700 border-pink-200',
+  default:       'bg-slate-100 text-slate-700 border-slate-200',
 };
 
 const getTechColor = (t: string) => techColors[t] ?? techColors.default;
@@ -36,17 +36,16 @@ function ProjectCard({ project, idx, inView, featured = false }:
       className="glass-card flex flex-col h-full"
     >
       {/* Top */}
-      <div className="flex items-start gap-3 mb-4">
-        <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-          style={{ background: 'rgba(59,130,246,0.1)' }}>
-          <FolderGit2 size={18} className="text-blue-400" />
+      <div className="flex items-start gap-3.5 mb-4">
+        <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-50 border border-blue-100">
+          <FolderGit2 size={18} className="text-blue-600" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <h3 className="font-bold text-white leading-tight">{project.name}</h3>
+            <h3 className="font-bold text-slate-900 text-lg leading-tight">{project.name}</h3>
             {featured && (
-              <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-yellow-400 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-2 py-0.5">
-                <Star size={9} fill="currentColor" /> Destacado
+              <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-2.5 py-0.5">
+                <Star size={10} fill="currentColor" /> Destacado
               </span>
             )}
           </div>
@@ -54,31 +53,31 @@ function ProjectCard({ project, idx, inView, featured = false }:
       </div>
 
       {/* Description */}
-      <p className="text-slate-400 text-sm leading-relaxed flex-1 mb-5">
+      <p className="text-slate-600 text-sm leading-relaxed flex-1 mb-5">
         {project.description}
       </p>
 
       {/* Tags */}
-      <div className="flex flex-wrap gap-1.5 mb-5">
+      <div className="flex flex-wrap gap-1.5 mb-6">
         {project.technologies.map((t) => (
-          <span key={t} className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getTechColor(t)}`}>
+          <span key={t} className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border ${getTechColor(t)}`}>
             {t}
           </span>
         ))}
       </div>
 
       {/* Links */}
-      <div className="flex items-center gap-4 pt-4 border-t border-blue-900/25">
+      <div className="flex items-center gap-4 pt-4 border-t border-slate-200">
         <a href={project.github} target="_blank" rel="noopener noreferrer"
           id={`project-repo-${project.id}`}
-          className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors">
-          <GitBranch size={14} /> Repositorio
+          className="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
+          <GitBranch size={15} /> Repositorio
         </a>
         {project.demo && (
           <a href={project.demo} target="_blank" rel="noopener noreferrer"
             id={`project-demo-${project.id}`}
-            className="flex items-center gap-1.5 text-sm text-cyan-400 hover:text-cyan-300 transition-colors">
-            <ExternalLink size={14} /> Demo
+            className="flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
+            <ExternalLink size={15} /> Demo
           </a>
         )}
       </div>
@@ -94,11 +93,7 @@ export default function Projects() {
   const rest = projects.filter((p) => !p.highlight);
 
   return (
-    <section id="proyectos" ref={ref} className="py-36 relative">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/3 w-96 h-96 rounded-full bg-blue-600/5 blur-[100px]" />
-      </div>
-
+    <section id="proyectos" ref={ref} className="py-20 sm:py-24 relative min-h-[calc(100vh-140px)] flex flex-col justify-center">
       <div className="section-container relative z-10">
         {/* Header */}
         <motion.div
@@ -109,10 +104,10 @@ export default function Projects() {
         >
           <p className="section-label justify-center"><FolderGit2 size={14} /> Proyectos</p>
           <h2 className="section-title">Trabajo en GitHub</h2>
-          <p className="text-slate-400 text-base mt-2">
+          <p className="text-slate-600 text-base mt-2">
             Repositorios públicos en{' '}
             <a href="https://github.com/Ludoviko451" target="_blank" rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
+              className="text-blue-600 hover:text-blue-700 font-semibold underline underline-offset-4">
               github.com/Ludoviko451
             </a>
           </p>

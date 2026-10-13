@@ -6,11 +6,11 @@ import { skills } from '../data/portfolioData';
 
 const iconMap: Record<string, React.ElementType> = { Server, Monitor, Database, Cloud };
 
-const palette: Record<string, { icon: string; dot: string; bg: string }> = {
-  blue:   { icon: '#60a5fa', dot: '#3b82f6', bg: 'rgba(59,130,246,0.08)'  },
-  cyan:   { icon: '#22d3ee', dot: '#06b6d4', bg: 'rgba(6,182,212,0.08)'   },
-  indigo: { icon: '#a5b4fc', dot: '#6366f1', bg: 'rgba(99,102,241,0.08)'  },
-  teal:   { icon: '#5eead4', dot: '#14b8a6', bg: 'rgba(20,184,166,0.08)'  },
+const palette: Record<string, { icon: string; dot: string; bg: string; border: string }> = {
+  blue:   { icon: '#2563eb', dot: '#2563eb', bg: '#eff6ff', border: '#dbeafe' },
+  cyan:   { icon: '#0284c7', dot: '#0284c7', bg: '#f0f9ff', border: '#e0f2fe' },
+  indigo: { icon: '#4f46e5', dot: '#4f46e5', bg: '#eef2ff', border: '#e0e7ff' },
+  teal:   { icon: '#059669', dot: '#059669', bg: '#ecfdf5', border: '#d1fae5' },
 };
 
 export default function Skills() {
@@ -18,11 +18,7 @@ export default function Skills() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="habilidades" ref={ref} className="py-36 relative">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/2 right-0 w-96 h-96 rounded-full bg-indigo-600/5 blur-[100px]" />
-      </div>
-
+    <section id="habilidades" ref={ref} className="py-20 sm:py-24 relative bg-white border-y border-slate-200/80 min-h-[calc(100vh-140px)] flex flex-col justify-center">
       <div className="section-container relative z-10">
         {/* Header */}
         <motion.div
@@ -33,7 +29,7 @@ export default function Skills() {
         >
           <p className="section-label justify-center"><Cpu size={14} /> Habilidades</p>
           <h2 className="section-title">Stack tecnológico</h2>
-          <p className="text-slate-400 text-base mt-2 max-w-lg mx-auto">
+          <p className="text-slate-600 text-base mt-2 max-w-lg mx-auto">
             Tecnologías con las que he trabajado en proyectos reales y personales.
           </p>
           <div className="section-divider mx-auto mt-6" style={{ maxWidth: 80 }} />
@@ -54,11 +50,13 @@ export default function Skills() {
               >
                 {/* Category header */}
                 <div className="flex items-center gap-3.5 mb-6">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ background: c.bg }}>
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 border"
+                    style={{ background: c.bg, borderColor: c.border }}
+                  >
                     <Icon size={22} style={{ color: c.icon }} />
                   </div>
-                  <h3 className="font-bold text-xs uppercase tracking-widest" style={{ color: c.icon }}>
+                  <h3 className="font-bold text-sm tracking-wide text-slate-900">
                     {group.category}
                   </h3>
                 </div>
@@ -73,8 +71,8 @@ export default function Skills() {
                       transition={{ delay: 0.25 + gIdx * 0.08 + iIdx * 0.04 }}
                       className="flex items-center gap-2.5"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: c.dot }} />
-                      <span className="text-slate-300 text-sm font-medium">{item}</span>
+                      <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: c.dot }} />
+                      <span className="text-slate-700 text-sm font-medium">{item}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -87,7 +85,7 @@ export default function Skills() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.7 }}
-          className="text-center text-[11px] text-slate-700 mt-10 font-mono"
+          className="text-center text-xs text-slate-400 mt-10 font-mono"
         >
           * Habilidades basadas en experiencia práctica, no porcentajes arbitrarios.
         </motion.p>

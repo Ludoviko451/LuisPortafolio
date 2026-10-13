@@ -16,11 +16,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="sobre-mi" ref={ref} className="py-36 relative">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-blue-600/5 blur-[100px]" />
-      </div>
-
+    <section id="sobre-mi" ref={ref} className="py-20 sm:py-24 relative bg-white border-y border-slate-200/80 min-h-[calc(100vh-140px)] flex flex-col justify-center">
       <div className="section-container relative z-10">
         {/* Header */}
         <motion.div
@@ -43,8 +39,8 @@ export default function About() {
           >
             <div className="space-y-6 mb-8">
               {personalInfo.about.map((p, i) => (
-                <p key={i} className="text-slate-400 leading-relaxed text-[1.05rem]">
-                  {i === 0 && <span className="text-blue-400 font-semibold mr-1">{'>'}</span>}
+                <p key={i} className="text-slate-600 leading-relaxed text-[1.05rem]">
+                  {i === 0 && <span className="text-blue-600 font-bold mr-1.5">{'>'}</span>}
                   {p}
                 </p>
               ))}
@@ -68,17 +64,16 @@ export default function About() {
               return (
                 <motion.div
                   key={item.label}
-                  initial={{ opacity: 0, scale: 0.92 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.35 + i * 0.08 }}
                   className="glass-card"
                 >
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
-                    style={{ background: `${item.color}18` }}>
-                    <Icon size={20} style={{ color: item.color }} />
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-blue-50 border border-blue-100">
+                    <Icon size={22} className="text-blue-600" />
                   </div>
-                  <h3 className="font-semibold text-slate-200 text-sm mb-2 leading-snug">{item.label}</h3>
-                  <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
+                  <h3 className="font-bold text-slate-900 text-base mb-2 leading-snug">{item.label}</h3>
+                  <p className="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
                 </motion.div>
               );
             })}
