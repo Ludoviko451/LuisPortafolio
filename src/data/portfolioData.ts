@@ -2,18 +2,18 @@
 
 export const personalInfo = {
   name: 'Luis Ángel Quirós Flórez',
-  role: 'Backend Developer',
-  roleAlt: 'Software Developer',
+  role: 'Software & Backend Developer',
+  roleAlt: 'Tecnología & TI',
   location: 'Cúcuta, Colombia',
   github: 'https://github.com/Ludoviko451',
   linkedin: 'https://www.linkedin.com/in/luisquirosflorez/',
   email: 'luisangelquirosflorez@gmail.com',
-  bio: 'Desarrollador de software apasionado por construir soluciones backend, aplicaciones web y servicios en la nube, con experiencia en microservicios, AWS y desarrollo de software.',
+  bio: 'Profesional en tecnología con experiencia en desarrollo backend, soporte técnico de aplicaciones, microservicios, bases de datos y cloud. Abierto a roles en desarrollo de software y tecnología general (TI).',
   about: [
-    'Soy desarrollador de software con experiencia profesional en desarrollo backend, microservicios, bases de datos y servicios en la nube.',
-    'Trabajé como Backend Developer en PRAGMA, participando en proyectos internos y con clientes, donde adquirí experiencia en desarrollo de soluciones backend, mantenimiento de aplicaciones, resolución de incidencias, AWS y calidad de software.',
-    'Me interesa el desarrollo de aplicaciones web, la arquitectura de software, los servicios en la nube y el aprendizaje continuo.',
-    'Mi objetivo es seguir desarrollando mis habilidades técnicas y aportar soluciones de calidad en equipos de desarrollo.',
+    'Soy desarrollador de software y entusiasta de la tecnología con experiencia profesional en desarrollo backend, soporte técnico, microservicios y servicios en la nube.',
+    'Trabajé en PRAGMA participando en proyectos corporativos, donde no solo desarrollé soluciones de backend y cloud en AWS, sino que también brindé soporte técnico a usuarios, resolución de incidencias en producción y optimización de consultas SQL.',
+    'Me interesan las diversas ramas del sector tecnológico: desarrollo de software, soporte de TI, análisis de sistemas, observabilidad e infraestructura cloud.',
+    'Mi objetivo es integrarme a equipos dinámicos donde pueda aportar mis conocimientos técnicos, capacidad analítica y disposición de aprendizaje constante.',
   ],
 };
 

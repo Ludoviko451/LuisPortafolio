@@ -1,0 +1,91 @@
+%PDF-1.4
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 612 792]
+  /Contents 4 0 R
+  /Resources <<
+    /Font <<
+      /F1 <<
+        /Type /Font
+        /Subtype /Type1
+        /BaseFont /Helvetica-Bold
+      >>
+      /F2 <<
+        /Type /Font
+        /Subtype /Type1
+        /BaseFont /Helvetica
+      >>
+    >>
+  >>
+>>
+endobj
+4 0 obj
+<<
+  /Length 750
+>>
+stream
+BT
+/F1 22 Tf
+50 720 Td
+(Luis Angel Quiros Florez) Tj
+/F2 13 Tf
+0 -26 Td
+(Software & Backend Developer | Tecnologia & TI) Tj
+/F2 10 Tf
+0 -18 Td
+(Email: luisangelquirosflorez@gmail.com | Cucuta, Colombia) Tj
+0 -14 Td
+(LinkedIn: linkedin.com/in/luisquirosflorez | GitHub: github.com/Ludoviko451) Tj
+/F1 12 Tf
+0 -30 Td
+(EXPERIENCIA PROFESIONAL) Tj
+/F2 10 Tf
+0 -18 Td
+(PRAGMA - Backend Developer (Julio 2024 - Enero 2025)) Tj
+0 -14 Td
+(- Soporte tecnico, resolucion de incidencias y mantenimiento en Evolution Team) Tj
+0 -14 Td
+(- Desarrollo de funciones AWS Lambda y observabilidad en Amazon CloudWatch) Tj
+0 -14 Td
+(- Refactorizacion de microservicios con Java, Spring Boot y calidad con SonarCloud) Tj
+/F1 12 Tf
+0 -30 Td
+(FORMACION ACADEMICA) Tj
+/F2 10 Tf
+0 -18 Td
+(- Ingenieria de Sistemas | UNAD (2025 - Actualidad)) Tj
+0 -14 Td
+(- Tecnologo en Analisis y Desarrollo de Software ADSO | SENA (2022 - 2024)) Tj
+ET
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000305 00000 n 
+trailer
+<<
+  /Size 5
+  /Root 1 0 R
+>>
+startxref
+1130
+%%EOF
